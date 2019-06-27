@@ -1,13 +1,21 @@
 <template lang="html">
 
+<div>
 <li>{{beer.name}}</li>
+<button v-on:click = "handleClick">Favoritues</button>
+</div>
 
 </template>
 
 <script>
 export default {
   name: "beer-item",
-  props: ["beer"]
+  props: ["beer"],
+  methods: {
+    handleClick(){
+      eventBus.
+    }
+  }
 }
 </script>
 
