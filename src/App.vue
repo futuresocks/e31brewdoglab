@@ -1,5 +1,8 @@
 <template lang="html">
+  <div>
   <h1>HI</h1>
+    <beer-view v-bind:beersProp="beersArray"></beer-view>
+  </div>
 </template>
 
 <script>
@@ -9,13 +12,16 @@ export default {
   name: 'app',
   data(){
     return {
-      beers: []
+      beersArray: []
     }
   },
   mounted(){
     fetch("https://api.punkapi.com/v2/beers")
     .then(response => response.json())
-    .then(data => this.beers = data)
+    .then(data => this.beersArray = data)
+  },
+  components : {
+    'beer-view': BeerView
   }
 }
 </script>
