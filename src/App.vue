@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
   <h1>HI</h1>
-  <router-view ></router-view>
+  <router-view :beersProp="beersArray"></router-view>
   </div>
 </template>
 

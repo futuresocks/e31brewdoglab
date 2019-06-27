@@ -1,11 +1,21 @@
 <template lang="html">
-<p>{{beersProp}}</p>
+
+<div>
+  <beer-list v-bind:beersProp='beersProp'></beer-list>
+</div>
+
 </template>
 
 <script>
+
+import BeerList from './BeerList.vue'
+
 export default {
   name: 'beer-view',
-  props: ['beersProp']
+  props: ['beersProp'],
+  components: {
+    "beer-list": BeerList
+  }
 }
 </script>
 
