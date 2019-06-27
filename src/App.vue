@@ -3,6 +3,8 @@
 </template>
 
 <script>
+  import BeerView from './views/BeerView.vue';
+
 export default {
   name: 'app',
   data(){
