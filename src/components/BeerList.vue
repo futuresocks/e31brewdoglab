@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BeerItem from './BeerItem.vue'
+import BeerItem from '@/components/BeerItem.vue'
 
 export default {
   name: "beer-list",

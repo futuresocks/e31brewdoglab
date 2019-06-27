@@ -1,13 +1,13 @@
 <template lang="html">
   <div>
-  <h1>HI</h1>
-  <router-view :beersProp="beersArray"></router-view>
+    <nav-bar></nav-bar>
+    <router-view :beersProp="beersArray" :favouritesProp="favouriteBeersArray"></router-view>
   </div>
 </template>
 
 <script>
-  import BeerView from './views/BeerView.vue';
-  import {eventBus} from "./main.js";
+import {eventBus} from "./main.js";
+import NavBar from '@/components/NavBar.vue'
 
 export default {
   name: 'app',
@@ -25,8 +25,8 @@ export default {
       this.favouriteBeersArray.push(beer)
     })
   },
-  components : {
-    'beer-view': BeerView
+  components: {
+    'nav-bar': NavBar
   }
 }
 </script>

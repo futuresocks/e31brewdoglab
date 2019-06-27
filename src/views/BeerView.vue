@@ -8,7 +8,7 @@
 
 <script>
 
-import BeerList from './BeerList.vue'
+import BeerList from '@/components/BeerList.vue'
 
 export default {
   name: 'beer-view',
