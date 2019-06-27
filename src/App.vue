@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
   <h1>HI</h1>
-    <beer-view v-bind:beersProp="beersArray"></beer-view>
+  <router-view ></router-view>
   </div>
 </template>
 
