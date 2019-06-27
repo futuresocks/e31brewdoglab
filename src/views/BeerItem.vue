@@ -8,12 +8,13 @@
 </template>
 
 <script>
+import {eventBus} from "../main.js"
 export default {
   name: "beer-item",
   props: ["beer"],
   methods: {
     handleClick(){
-      eventBus.
+      eventBus.$emit("beer-clicked", this.beer)
     }
   }
 }

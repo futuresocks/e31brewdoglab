@@ -7,18 +7,23 @@
 
 <script>
   import BeerView from './views/BeerView.vue';
+  import {eventBus} from "./main.js";
 
 export default {
   name: 'app',
   data(){
     return {
-      beersArray: []
+      beersArray: [],
+      favouriteBeersArray: []
     }
   },
   mounted(){
     fetch("https://api.punkapi.com/v2/beers")
     .then(response => response.json())
     .then(data => this.beersArray = data)
+    eventBus.$on("beer-clicked", (beer) => {
+      this.favouriteBeersArray.push(beer)
+    })
   },
   components : {
     'beer-view': BeerView
